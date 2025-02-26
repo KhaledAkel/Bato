@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../components/index.dart' show Logo;
 
 class SplashPage extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Welcome to the Splash Page!'),
+        child: Logo(size: 100.0),
       ),
     );
   }

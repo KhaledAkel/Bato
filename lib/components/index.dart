@@ -1,1 +1,1 @@
-export './logo.dart';
+export 'logo/logo.dart';

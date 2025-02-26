@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../components/index.dart' show Logo;
+import '../../theme/index.dart' show AppColors;
 
 class SplashPage extends StatefulWidget {
   @override
@@ -23,6 +24,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       body: Center(
         child: Logo(size: 100.0),
       ),

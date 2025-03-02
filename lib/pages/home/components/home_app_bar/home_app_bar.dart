@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../components/index.dart' show Logo;
-import '../../../../theme/app_colors.dart' show AppColors;
+import '../../../../theme/index.dart' show AppColors;
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
 

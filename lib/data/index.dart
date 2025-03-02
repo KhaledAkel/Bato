@@ -1,2 +1,3 @@
 export 'users.dart';
 export 'locations.dart';
+export 'posts.dart';

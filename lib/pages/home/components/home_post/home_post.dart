@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './blocks/index.dart' show PostDetails;
+import '../../../../theme/app_colors.dart' show AppColors;
 
 class HomePost extends StatefulWidget {
   final int id;
@@ -8,6 +9,7 @@ class HomePost extends StatefulWidget {
   final String postProfileImageUrl;
   final List<String> imageUrls;
   final String postCaption;
+
   @override
   // ignore: library_private_types_in_public_api
   _HomePostState createState() => _HomePostState();
@@ -21,17 +23,16 @@ class HomePost extends StatefulWidget {
     required this.imageUrls,
     required this.postCaption,
   }) : super(key: key);
-
-
 }
 
 class _HomePostState extends State<HomePost> {
   final PageController _controller =
       PageController(initialPage: 1, viewportFraction: 0.90);
-@override
+
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 500.0,
+      height: 550.0, // Increase the height to make the post longer
       child: PageView.builder(
         controller: _controller,
         scrollDirection: Axis.horizontal,
@@ -48,7 +49,7 @@ class _HomePostState extends State<HomePost> {
           } else {
             final imageIndex = index - 1;
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 10),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Image.network(

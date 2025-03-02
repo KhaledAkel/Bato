@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../theme/app_colors.dart' show AppColors;
 import './index.dart';
 
 class PostDetails extends StatelessWidget {
@@ -22,11 +23,12 @@ class PostDetails extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 10),
       child: Container(
+
         decoration: BoxDecoration(
-          color: Theme.of(context).scaffoldBackgroundColor,
+          color: AppColors.background,
           borderRadius: BorderRadius.circular(15),
           border: Border.all(
-            color: Theme.of(context).primaryColor,
+            color: AppColors.text,
             width: 1,
           ),
         ),

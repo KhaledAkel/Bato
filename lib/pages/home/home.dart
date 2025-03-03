@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../theme/index.dart' show AppColors;
-import 'components/index.dart' show HomeAppBar, HomePost;
+import 'components/index.dart' show  HomePost;
 import '../../data/index.dart' show posts;
 
 

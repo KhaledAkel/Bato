@@ -34,7 +34,7 @@ class _HomePostState extends State<HomePost> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: SizedBox(
-        height: 600.0, // Increase the height to make the post longer
+        height: 620.0, // Increase the height to make the post longer
         child: PageView.builder(
           controller: _controller,
           scrollDirection: Axis.horizontal,

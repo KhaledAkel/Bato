@@ -40,6 +40,8 @@ class PostDetails extends StatelessWidget {
                 postLocation: postLocation,
                 postProfileImageUrl: postProfileImageUrl),
             PostCaption(postCaption: postCaption),
+            Spacer(),
+            PostBottomBar(),                  
           ],
         ),
       ),

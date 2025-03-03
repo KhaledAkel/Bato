@@ -1,0 +1,1 @@
+export './companion_post/companion_post.dart';

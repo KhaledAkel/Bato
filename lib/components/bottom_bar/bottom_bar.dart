@@ -10,11 +10,11 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final icons = [
-      Icons.home,
-      Icons.explore,
-      Icons.add,
-      Icons.airplane_ticket,
-      Icons.account_circle,
+      Icons.home_outlined,
+      Icons.explore_outlined,
+      Icons.add_outlined,
+      Icons.airplane_ticket_outlined,
+      Icons.account_circle_outlined,
     ];
 
     return BottomAppBar(

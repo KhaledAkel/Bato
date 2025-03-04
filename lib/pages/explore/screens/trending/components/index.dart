@@ -1,0 +1,1 @@
+export 'trending_card/trending_card.dart';

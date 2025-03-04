@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './screens/index.dart' show CompanionsPage, HostsPage;
+import './screens/index.dart' show CompanionsPage, HostsPage, TrendingPage;
 import '../../theme/index.dart' show AppColors, AppTextStyles;
 
 class ExplorePage extends StatelessWidget {
@@ -49,15 +49,7 @@ class ExplorePage extends StatelessWidget {
           Expanded(
             child: TabBarView(
               children: [
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                  child: ListView(
-                    children: [
-                      
-                    ],
-                  ),
-                ),
+                TrendingPage(),
                 CompanionsPage(),
                 HostsPage(),
               ],

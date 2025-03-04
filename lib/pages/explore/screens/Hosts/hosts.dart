@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'components/index.dart' show  HostPost;
+import 'components/index.dart' show HostPost, SearchBarWidget;
 import '../../../../data/index.dart' show companions_posts;
-
 
 class HostsPage extends StatelessWidget {
   const HostsPage({super.key});
@@ -9,9 +8,12 @@ class HostsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: companions_posts.length,
-        itemBuilder: (context, index) {
-          final post = companions_posts[index];
+      itemCount: companions_posts.length + 1, // +1 for the SearchBarWidget
+      itemBuilder: (context, index) {
+        if (index == 0) {
+          return const SearchBarWidget(); // First item is the SearchBarWidget
+        } else {
+          final post = companions_posts[index - 1]; // Adjust index for posts
           return HostPost(
             id: post.id,
             postOwnerName: post.postOwnerName,
@@ -20,7 +22,8 @@ class HostsPage extends StatelessWidget {
             imageUrls: post.imageUrls,
             postCaption: post.postCaption,
           );
-        },
-      );
+        }
+      },
+    );
   }
 }

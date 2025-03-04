@@ -18,7 +18,7 @@ class SearchBarWidget extends StatelessWidget {
           enabled: false, // Disables functionality
           decoration: InputDecoration(
             icon: Icon(Icons.search, color: Colors.grey),
-            hintText: "Search for somone to travel with",
+            hintText: "Search for a host",
             border: InputBorder.none,
           ),
         ),

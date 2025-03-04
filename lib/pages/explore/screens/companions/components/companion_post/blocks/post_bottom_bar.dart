@@ -24,6 +24,7 @@ class _PostBottomBarState extends State<PostBottomBar> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
+        backgroundColor: AppColors.background,
       ),
     ),
 

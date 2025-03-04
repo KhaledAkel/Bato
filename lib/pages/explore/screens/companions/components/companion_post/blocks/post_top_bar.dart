@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './index.dart' show PostProfileImage, PostOwnerName, PostLocation;
+import './index.dart' show PostProfileImage, PostOwnerName, PostLocation, PostAddIcon;
 
 class PostTopBar extends StatelessWidget {
   final String postOwnerName;
@@ -18,9 +18,12 @@ class PostTopBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          PostProfileImage(profileImageUrl: postProfileImageUrl),
-          const SizedBox(width: 10),
+          Row(
+            children: [
+              PostProfileImage(profileImageUrl: postProfileImageUrl),
+               const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -28,6 +31,11 @@ class PostTopBar extends StatelessWidget {
               PostLocation(location: postLocation),
             ],
           ),
+            ],
+            
+          ),
+          PostAddIcon(),
+         
         ],
       ),
     );

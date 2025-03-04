@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './screens/index.dart' show CompanionsPage;
+import './screens/index.dart' show CompanionsPage, HostsPage;
 import '../../theme/index.dart' show AppColors, AppTextStyles;
 
 class ExplorePage extends StatelessWidget {
@@ -59,17 +59,7 @@ class ExplorePage extends StatelessWidget {
                   ),
                 ),
                 CompanionsPage(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 16,
-                  ),
-                  child: ListView(
-                    children: [
-                     
-                    ],
-                  ),
-                )
+                HostsPage(),
               ],
             ),
           ),

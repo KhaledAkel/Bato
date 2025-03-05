@@ -53,6 +53,12 @@ final GoRouter goRouter = GoRouter(
           path: '/plan_trip',
           builder: (context, state) => PlanTripPage(),
         ),
+        GoRoute(path: '/flights', builder: (context, state) => Center(
+          child: Text('Flights Page'),
+        )),
+        GoRoute(path: '/hotels', builder: (context, state) => Center(
+          child: Text('Hotels Page'),
+        )),
       ],
     ),
   ],

@@ -1,0 +1,1 @@
+export './hotel_card/hotel_card.dart';

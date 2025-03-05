@@ -17,4 +17,12 @@ final List<City> cities = [
     oldPrice: 600,
     newPrice: 510,
   ),
+    City(
+    imagePath: 'https://res.cloudinary.com/doiav30hi/image/upload/v1741180304/hotel2_j9bo1m.jpg',
+    cityName: 'Paris',
+    monthYear: 'Feb 2025',
+    discount: '15%',
+    oldPrice: 600,
+    newPrice: 510,
+  ),
 ];

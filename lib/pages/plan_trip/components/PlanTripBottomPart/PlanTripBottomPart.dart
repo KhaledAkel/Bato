@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../index.dart' show CityCard;
 import '../../../../data/index.dart' show cities;
-import '../../../../theme/index.dart' show  AppTextStyles;
+import '../../../../theme/index.dart' show  AppTextStyles,  AppColors;
 
 class PlanTripBottomPart extends StatelessWidget {
   @override
@@ -20,6 +20,7 @@ class PlanTripBottomPart extends StatelessWidget {
           ),
         ),
         Container(
+          color: AppColors.background,
           height: 240.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,

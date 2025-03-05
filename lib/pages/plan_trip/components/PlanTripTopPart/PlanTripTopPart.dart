@@ -61,6 +61,7 @@ class _PlanTripTopPartState extends State<PlanTripTopPart> {
                 SizedBox(
                   height: 40.0,
                   child: ToggleButtons(
+                    splashColor: Colors.transparent,
                     borderColor: Colors.white,
                     fillColor: AppColors.background,
                     borderWidth: 2,

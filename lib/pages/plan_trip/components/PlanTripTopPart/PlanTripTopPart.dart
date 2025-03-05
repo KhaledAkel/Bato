@@ -53,16 +53,9 @@ class _PlanTripTopPartState extends State<PlanTripTopPart> {
                           icon: Icon(Icons.search, color: Colors.black),
                           onPressed: () {
                             if (isSelected[0]) {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Center(
-                                    child: Text('Flights'),
-                                  ),
-                                ),
-                              );
+                              context.push('/flights');
                             } else if (isSelected[1]) {
-                              context.go('/hotels');
+                              context.push('/hotels');
                             }
                           },
                         ),

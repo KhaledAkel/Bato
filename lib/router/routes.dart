@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../pages/index.dart' show SplashPage, HomePage, ExplorePage;
+import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage;
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
 import '../theme/index.dart' show AppColors;
@@ -18,6 +18,9 @@ final GoRouter goRouter = GoRouter(
         final List<Widget> pages = [
           HomePage(),
           ExplorePage(),
+          Container(), // Add Post Page
+          PlanTripPage(),
+
         ];
 
         return Scaffold(
@@ -45,6 +48,10 @@ final GoRouter goRouter = GoRouter(
         GoRoute(
           path: '/explore',
           builder: (context, state) => ExplorePage(),
+        ),
+        GoRoute(
+          path: '/plan_trip',
+          builder: (context, state) => PlanTripPage(),
         ),
       ],
     ),

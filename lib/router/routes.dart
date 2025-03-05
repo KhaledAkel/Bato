@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage;
+import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage;
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
 import '../theme/index.dart' show AppColors;
@@ -12,6 +12,10 @@ final GoRouter goRouter = GoRouter(
       path: '/',
       builder: (context, state) => SplashPage(),
     ),
+            GoRoute(path: '/flights', builder: (context, state) => FlightsPage()),
+        GoRoute(path: '/hotels', builder: (context, state) => Center(
+          child: Text('Hotels Page'),
+        )),
     ShellRoute(
       builder: (context, state, child) {
         final int pageIndex = getPageIndexOfBottomBar(state.fullPath);
@@ -53,12 +57,7 @@ final GoRouter goRouter = GoRouter(
           path: '/plan_trip',
           builder: (context, state) => PlanTripPage(),
         ),
-        GoRoute(path: '/flights', builder: (context, state) => Center(
-          child: Text('Flights Page'),
-        )),
-        GoRoute(path: '/hotels', builder: (context, state) => Center(
-          child: Text('Hotels Page'),
-        )),
+
       ],
     ),
   ],

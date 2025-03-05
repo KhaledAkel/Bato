@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../CustomShapeClipper.dart';
+import 'package:go_router/go_router.dart';
+import '../CustomShapeClipper/CustomShapeClipper.dart';
 import '../../../../theme/index.dart';
 
 class PlanTripTopPart extends StatefulWidget {
@@ -50,7 +51,20 @@ class _PlanTripTopPartState extends State<PlanTripTopPart> {
                             EdgeInsets.symmetric(horizontal: 32.0, vertical: 14.0),
                         suffixIcon: IconButton(
                           icon: Icon(Icons.search, color: Colors.black),
-                          onPressed: () {},
+                          onPressed: () {
+                            if (isSelected[0]) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Center(
+                                    child: Text('Flights'),
+                                  ),
+                                ),
+                              );
+                            } else if (isSelected[1]) {
+                              context.go('/hotels');
+                            }
+                          },
                         ),
                         border: InputBorder.none,
                       ),
@@ -71,18 +85,30 @@ class _PlanTripTopPartState extends State<PlanTripTopPart> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                        child: Icon(
-                          Icons.flight_takeoff_outlined,
-                          size: 16.0,
-                          
-                        )
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.flight_takeoff_outlined,
+                              color: isSelected[0] ? AppColors.primary : Colors.white,
+                              size: 24.0,
+                            ),
+                          ],
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Icon(
-                          Icons.holiday_village_outlined,
-                          size: 16.0,
-                        )
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.holiday_village_outlined,
+                              color: isSelected[1] ? AppColors.primary : Colors.white,
+                              size: 24.0,
+                            ),
+                           
+                          ],
+                        ),
                       ),
                     ],
                     onPressed: (int index) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../../../theme/index.dart' show AppTextStyles;
+import '../../../../../../../theme/index.dart' show AppTextStyles, AppColors;
 
 class FlightViewDeal extends StatelessWidget {
   FlightViewDeal({super.key});
@@ -11,13 +11,13 @@ class FlightViewDeal extends StatelessWidget {
       height: 35,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Theme.of(context).primaryColor, width: 1)),
+          border: Border.all(color: AppColors.text, width: 1)),
       child: Align(
         alignment: Alignment.center,
         child: Text(
           'View Deal',
           style: TextStyle(
-            color: Theme.of(context).primaryColor,
+            color: AppColors.text,
             fontSize: 16,
             fontWeight: FontWeight.bold,
             fontFamily: AppTextStyles.fontFamilyPrimary,

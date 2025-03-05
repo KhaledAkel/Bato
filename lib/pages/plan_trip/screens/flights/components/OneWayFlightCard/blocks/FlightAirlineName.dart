@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../../../theme/index.dart' show AppTextStyles;
+import '../../../../../../../theme/index.dart' show AppTextStyles, AppColors;
 
 class FlightAirlineName extends StatelessWidget {
   final String airlineName;
@@ -14,7 +14,7 @@ class FlightAirlineName extends StatelessWidget {
         fontSize: 16,
         fontWeight: FontWeight.w900,
         fontFamily: AppTextStyles.fontFamilyPrimary,
-        color: Theme.of(context).primaryColor,
+        color: AppColors.text,
       ),
     );
   }

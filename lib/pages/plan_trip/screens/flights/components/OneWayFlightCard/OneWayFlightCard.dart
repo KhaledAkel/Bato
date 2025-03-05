@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'blocks/index.dart' show FlightDetails, FLightDealRow, AirlineLogo;
+import '../../../../../../theme/index.dart' show AppColors;
 
 class OneWayFlightCard extends StatelessWidget {
   final String origin;
@@ -31,40 +32,43 @@ class OneWayFlightCard extends StatelessWidget {
   Widget build(BuildContext context) {
     // Check if the app is in dark mode
 
-    return Card(
-        color: Theme.of(context).scaffoldBackgroundColor,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
-            side: BorderSide(
-              color:
-                  Theme.of(context).primaryColor, // Border color in dark mode
-              width: 1,
-            ) // No border in light mode
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      child: Card(
+          color: AppColors.background,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+              side: BorderSide(
+                color:
+                    AppColors.text, // Border color in dark mode
+                width: 1,
+              ) // No border in light mode
+              ),
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    AirlineLogo(airlineLogoUrl: airlineLogoUrl),
+                  ],
+                ),
+                FlightDetails(
+                  origin: origin,
+                  destination: destination,
+                  departureDate: departureDate,
+                  arrivalDate: arrivalDate,
+                  flightStatus: flightStatus,
+                  duration: duration,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: FLightDealRow(price: price),
+                ),
+              ],
             ),
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  AirlineLogo(airlineLogoUrl: airlineLogoUrl),
-                ],
-              ),
-              FlightDetails(
-                origin: origin,
-                destination: destination,
-                departureDate: departureDate,
-                arrivalDate: arrivalDate,
-                flightStatus: flightStatus,
-                duration: duration,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: FLightDealRow(price: price),
-              ),
-            ],
-          ),
-        ));
+          )),
+    );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../../../theme/index.dart' show AppTextStyles;
+import '../../../../../../../theme/index.dart' show AppTextStyles, AppColors;
 
 class FlightDetailsTopRow extends StatelessWidget {
   final String departureDate;
@@ -22,7 +22,7 @@ class FlightDetailsTopRow extends StatelessWidget {
           style: TextStyle(
             fontSize: 16,
             fontFamily: AppTextStyles.fontFamilyPrimary,
-            color: Theme.of(context).primaryColor,
+            color: AppColors.text,
           ),
         ),
         Text(
@@ -30,7 +30,7 @@ class FlightDetailsTopRow extends StatelessWidget {
           style: TextStyle(
             fontSize: 12,
             fontFamily: AppTextStyles.fontFamilyPrimary,
-            color: Theme.of(context).primaryColor,
+            color: AppColors.text,
           ),
         ),
       ],

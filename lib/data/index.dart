@@ -4,3 +4,4 @@ export 'posts.dart';
 export 'companions.dart';
 export 'trending.dart';
 export 'cities.dart';
+export 'trips.dart';                    

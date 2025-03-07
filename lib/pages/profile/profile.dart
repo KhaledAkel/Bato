@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/index.dart ' show ProfileMainPost;
+import './components/index.dart' show ProfileMainPost, ProfileTabController;
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -18,6 +18,7 @@ class ProfilePage extends StatelessWidget {
           postCaption: 'This is a caption',
           
         ),
+        ProfileTabController(),
       ],
     );
   }

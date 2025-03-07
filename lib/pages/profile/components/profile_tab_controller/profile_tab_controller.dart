@@ -58,8 +58,8 @@ class ProfileTabController extends StatelessWidget {
               child: TabBarView(
                 children: [
                   TripsSection(),
-                  Center(child: Text('Moments Content')),
-                  Center(child: Text('As a Host Content')),
+                  TripsSection(),
+                  TripsSection(),
                 ],
               ),
             ),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../../../theme/index.dart' show AppColors, AppTextStyles;
+import '../index.dart' show TripsSection;
 
 class ProfileTabController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 600,
+      height: 550,
       child: DefaultTabController(
         length: 3, // Number of tabs
         child: Column(
@@ -56,7 +57,7 @@ class ProfileTabController extends StatelessWidget {
               height: 500,
               child: TabBarView(
                 children: [
-                  Center(child: Text('Trips Content')),
+                  TripsSection(),
                   Center(child: Text('Moments Content')),
                   Center(child: Text('As a Host Content')),
                 ],

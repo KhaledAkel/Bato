@@ -35,6 +35,7 @@ class AddHostPostPage extends StatelessWidget {
           postLocation: posts[0].postLocation,
           postProfileImageUrl: posts[0].postOwnerProfileUrl,
           postCaption: posts[0].postCaption,
+          
         
         ),
         IconButton(

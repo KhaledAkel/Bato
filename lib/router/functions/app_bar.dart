@@ -4,6 +4,7 @@ import '../../pages/explore/components/index.dart' show ExploreAppBar;
 import '../../pages/plan_trip/components/index.dart' show PlanTripAppBar;
 import '../../pages/profile/index.dart' show MyProfileAppBar;
 
+
 PreferredSizeWidget? getAppBar(BuildContext context, String? fullPath) {
   switch (fullPath) {
     case '/home':
@@ -17,6 +18,9 @@ PreferredSizeWidget? getAppBar(BuildContext context, String? fullPath) {
 
     case '/my_profile':
       return MyProfileAppBar();
+
+ 
+
       
       
     default:

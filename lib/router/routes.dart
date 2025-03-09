@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage;
+import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, AddTripPostPage;
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
 import '../theme/index.dart' show AppColors;
@@ -14,6 +14,10 @@ final GoRouter goRouter = GoRouter(
     ),
     GoRoute(path: '/flights', builder: (context, state) => FlightsPage()),
     GoRoute(path: '/hotels', builder: (context, state) => HotelsPage()),
+        GoRoute(
+          path: '/add_trip',
+          builder: (context, state) => AddTripPostPage(),
+        ),
       
 
     ShellRoute(
@@ -22,9 +26,10 @@ final GoRouter goRouter = GoRouter(
         final List<Widget> pages = [
           HomePage(),
           ExplorePage(),
-          Container(), // Add Post Page
+          AddPostPage(), // Add Post Page
           PlanTripPage(),
           ProfilePage(),
+          
 
         ];
 
@@ -54,6 +59,11 @@ final GoRouter goRouter = GoRouter(
           path: '/explore',
           builder: (context, state) => ExplorePage(),
         ),
+          GoRoute(
+          path: '/add_post',
+          builder: (context, state) => AddPostPage(), // Add Post Page
+        ),
+
         GoRoute(
           path: '/plan_trip',
           builder: (context, state) => PlanTripPage(),
@@ -62,7 +72,7 @@ final GoRouter goRouter = GoRouter(
           path: '/my_profile',
           builder: (context, state) => ProfilePage(),
         ),
-
+      
       ],
     ),
   ],

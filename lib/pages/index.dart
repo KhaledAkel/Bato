@@ -6,3 +6,4 @@ export './plan_trip/index.dart';
 export './profile/profile.dart';
 export './add_post/add_post.dart';
 export './add_post/screens/index.dart';
+export './done/done.dart';

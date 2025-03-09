@@ -51,7 +51,6 @@ class ProfileTabController extends StatelessWidget {
               child: TabBarView(
                 children: [
                   TripsSection(),
-                 
                   TripsSection(),
                 ],
               ),

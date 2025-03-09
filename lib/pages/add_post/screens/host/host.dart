@@ -43,6 +43,7 @@ class AddHostPostPage extends StatelessWidget {
           icon: Icon(Icons.arrow_forward_rounded),
           iconSize: 50,
           onPressed: () {
+            context.go('/done');
         
           },
         ),

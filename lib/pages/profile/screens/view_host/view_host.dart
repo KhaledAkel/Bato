@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../data/index.dart' show trips;
+import '../../../../data/index.dart' show asHostPosts;
 import './components/index.dart' show ViewHostPost;
 import '../../../../theme/index.dart' show AppColors, AppTextStyles;  
 
@@ -21,12 +21,12 @@ class ViewHostPage extends StatelessWidget {
       ),
       body:  Center(
       child: ViewHostPost(
-            id: trips[hostId].id,
-            postOwnerName: trips[hostId].postOwnerName,
-            postLocation: trips[hostId].postLocation,
-            postProfileImageUrl:  trips[hostId].postOwnerProfileUrl,
-            imageUrls: trips[hostId].imageUrls,
-            postCaption: trips[hostId].postCaption,
+            id: asHostPosts[hostId].id,
+            postOwnerName: asHostPosts[hostId].postOwnerName,
+            postLocation: asHostPosts[hostId].postLocation,
+            postProfileImageUrl:  asHostPosts[hostId].postOwnerProfileUrl,
+            imageUrls: asHostPosts[hostId].imageUrls,
+            postCaption: asHostPosts[hostId].postCaption,
           )
     )
     );

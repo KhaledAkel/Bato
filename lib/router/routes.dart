@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, AddTripPostPage, DonePage ;
+import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, AddTripPostPage, AddHostPostPage,  DonePage ;
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
 import '../theme/index.dart' show AppColors;

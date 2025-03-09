@@ -12,7 +12,7 @@ class AddHostPostPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.background,
         scrolledUnderElevation: 0,
-        title: Text('Share Your Trip', 
+        title: Text('Share Your Host', 
           style: TextStyle(
             color: AppColors.text,
             fontSize: 24,

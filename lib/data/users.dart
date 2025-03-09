@@ -12,10 +12,7 @@ List<User> usersList = [
       'https://res.cloudinary.com/doiav30hi/image/upload/v1741366670/AlexMan_gkp20z.jpg',
   
     ],
-    trips : [
-    ],
 
-    host: [],
   ),
   User(
     id: 1,
@@ -28,10 +25,7 @@ List<User> usersList = [
       'https://res.cloudinary.com/doiav30hi/image/upload/v1740920754/samples/food/dessert.jpg',
       'https://res.cloudinary.com/doiav30hi/image/upload/v1740920762/samples/balloons.jpg',
     ],
-    trips : [
-    ],
 
-    host: [],
   ),
 
 ];

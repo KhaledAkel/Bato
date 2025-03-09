@@ -5,6 +5,7 @@ class Post {
   final String postOwnerProfileUrl;
   final List<String> imageUrls;
   final String postCaption;
+  final int ownerId;
 
   Post({
     required this.id,
@@ -13,6 +14,7 @@ class Post {
     required this.postOwnerProfileUrl,
     required this.imageUrls,
     required this.postCaption,
+    required this.ownerId,
   });
 
 

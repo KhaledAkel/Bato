@@ -7,26 +7,26 @@ import '../../../../theme/index.dart' show AppColors, AppTextStyles;
 
 
 class ViewHostPage extends StatelessWidget {
-  final int tripId;
+  final int hostId;
 
-  const ViewHostPage({super.key, required this.tripId});  
+  const ViewHostPage({super.key, required this.hostId});  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text('Trip Details'),
+        title: Text('Host Post Details'),
         backgroundColor: AppColors.background,
       ),
       body:  Center(
       child: ViewHostPost(
-            id: trips[tripId].id,
-            postOwnerName: trips[tripId].postOwnerName,
-            postLocation: trips[tripId].postLocation,
-            postProfileImageUrl:  trips[tripId].postOwnerProfileUrl,
-            imageUrls: trips[tripId].imageUrls,
-            postCaption: trips[tripId].postCaption,
+            id: trips[hostId].id,
+            postOwnerName: trips[hostId].postOwnerName,
+            postLocation: trips[hostId].postLocation,
+            postProfileImageUrl:  trips[hostId].postOwnerProfileUrl,
+            imageUrls: trips[hostId].imageUrls,
+            postCaption: trips[hostId].postCaption,
           )
     )
     );

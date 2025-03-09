@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../../../theme/index.dart' show AppColors, AppTextStyles;
-import 'index.dart';
+import '../../../../../../../theme/app_colors.dart' show AppColors;
+import './index.dart';
 
 class PostDetails extends StatelessWidget {
   final int id;

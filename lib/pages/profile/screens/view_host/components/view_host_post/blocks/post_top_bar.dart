@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'index.dart' show PostProfileImage, PostOwnerName, PostLocation;
+import './index.dart' show PostProfileImage, PostOwnerName, PostLocation;
 
 class PostTopBar extends StatelessWidget {
   final String postOwnerName;

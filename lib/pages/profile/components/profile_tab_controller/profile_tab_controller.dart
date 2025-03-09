@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../theme/index.dart' show AppColors, AppTextStyles;
-import '../index.dart' show TripsSection;
+import '../index.dart' show TripsSection, HostSection;
 
 class ProfileTabController extends StatelessWidget {
   @override
@@ -51,7 +51,7 @@ class ProfileTabController extends StatelessWidget {
               child: TabBarView(
                 children: [
                   TripsSection(),
-                  TripsSection(),
+                  HostSection(),
                 ],
               ),
             ),

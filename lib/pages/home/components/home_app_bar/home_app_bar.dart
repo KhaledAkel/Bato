@@ -27,7 +27,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: AppColors.text,
           iconSize: 25,
           onPressed: () {
-            context.go('/messenger');
+            context.push('/messenger');
           },
         ),
       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../components/index.dart' show Logo;
 import '../../../../theme/index.dart' show AppColors;
 
@@ -25,7 +26,9 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: Icon(Icons.message_outlined),
           color: AppColors.text,
           iconSize: 25,
-          onPressed: () {},
+          onPressed: () {
+            context.go('/messenger');
+          },
         ),
       ],
       

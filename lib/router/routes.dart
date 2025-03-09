@@ -18,6 +18,7 @@ final GoRouter goRouter = GoRouter(
           path: '/add_trip',
           builder: (context, state) => AddTripPostPage(),
         ),
+    GoRoute(path: '/add_host', builder: (context, state) => AddHostPostPage()),
     GoRoute(path: '/done', builder: (context, state) => DonePage()),
       
 

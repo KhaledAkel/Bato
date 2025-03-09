@@ -18,8 +18,9 @@ class AddPostPage extends StatelessWidget {
             onTap: () => context.push('/add_trip'),
           ),
           Box(
-            text: 'Event',
+            text: 'Host',
             color: AppColors.primary,
+            onTap: () => context.push('/add_host'),
           ),
         ],
       ),

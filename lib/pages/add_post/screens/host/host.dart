@@ -9,6 +9,7 @@ class AddHostPostPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.background,
         scrolledUnderElevation: 0,

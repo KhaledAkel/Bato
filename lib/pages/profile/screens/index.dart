@@ -1,0 +1,1 @@
+export './view_trip/view_trip.dart';

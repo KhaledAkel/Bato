@@ -13,7 +13,8 @@ class TripsSection extends StatelessWidget {
         itemCount: trips.length,
         itemBuilder: (BuildContext context, int index) {
           return TripPreview(
-            trip_preview_image: trips[index].imageUrls[0],
+            tripId: trips[index].id,
+            tripPreviewImage: trips[index].imageUrls[0],
           );
       
         },

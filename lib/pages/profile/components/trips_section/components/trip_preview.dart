@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import '../../../../../theme/index.dart' show AppColors;
 
 class TripPreview extends StatelessWidget{
+  final int tripId;
   final String trip_preview_image;
 
-  TripPreview({required this.trip_preview_image});
+  TripPreview({required this.trip_preview_image, required this.tripId});
   @override
   Widget build(BuildContext context) {
     return SizedBox(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './components/index.dart' show ProfileMainPost, ProfileTabController;
-import '../../data/index.dart' show usersList;
+import '../../components/index.dart' show ProfileMainPost, ProfileTabController;
+import '../../../../data/index.dart' show usersList;
 
 class ProfilePage extends StatelessWidget {
   @override

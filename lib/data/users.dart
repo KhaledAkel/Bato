@@ -4,13 +4,13 @@ List<User> usersList = [
   User(
     id: 0,
     name: 'John Doe',
-    avatar: 'https://res.cloudinary.com/doiav30hi/image/upload/v1740920764/cld-sample.jpg',
+    avatar: 'https://res.cloudinary.com/doiav30hi/image/upload/v1741366670/AlexMan_gkp20z.jpg',
     biography: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     currentCity: 'Lisbon, Portugal',
     imageUrls: [
-      'https://res.cloudinary.com/doiav30hi/image/upload/v1740920764/cld-sample.jpg',
-      'https://res.cloudinary.com/doiav30hi/image/upload/v1740920754/samples/food/dessert.jpg',
-      'https://res.cloudinary.com/doiav30hi/image/upload/v1740920762/samples/balloons.jpg',
+      'https://res.cloudinary.com/doiav30hi/image/upload/v1740920763/samples/man-portrait.jpg',
+      'https://res.cloudinary.com/doiav30hi/image/upload/v1741366670/AlexMan_gkp20z.jpg',
+  
     ],
     trips : [
     ],

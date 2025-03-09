@@ -14,6 +14,7 @@ class ViewTripPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         title: Text('Trip Details'),
         backgroundColor: AppColors.background,

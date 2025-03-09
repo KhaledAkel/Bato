@@ -8,7 +8,7 @@ class ProfileTabController extends StatelessWidget {
     return SizedBox(
       height: 550,
       child: DefaultTabController(
-        length: 3, // Number of tabs
+        length: 2, // Number of tabs
         child: Column(
           children: [
             // TabBar can be placed here in the body
@@ -22,14 +22,7 @@ class ProfileTabController extends StatelessWidget {
                     fontFamily: AppTextStyles.fontFamilyPrimary,
                   ),
                 ),
-                Text(
-                  'Moments',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: AppTextStyles.fontFamilyPrimary,
-                  ),
-                ),
+          
                 Text(
                   'As a Host',
                   style: TextStyle(
@@ -58,7 +51,7 @@ class ProfileTabController extends StatelessWidget {
               child: TabBarView(
                 children: [
                   TripsSection(),
-                  TripsSection(),
+                 
                   TripsSection(),
                 ],
               ),

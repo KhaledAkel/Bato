@@ -1,60 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../theme/index.dart' show AppColors;
+import '../../data/index.dart' show contacts;
+import './components/index.dart' show ContactTile;
 
 class MessengerPage extends StatelessWidget {
-  final List<Map<String, String>> contacts = [
-    {
-      'name': 'Alice',
-      'currentCity': 'New York',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'Bob',
-      'currentCity': 'Los Angeles',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'Charlie',
-      'currentCity': 'Chicago',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'David',
-      'currentCity': 'Houston',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'Eve',
-      'currentCity': 'Phoenix',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'Frank',
-      'currentCity': 'Philadelphia',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'Grace',
-      'currentCity': 'San Antonio',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'Hank',
-      'currentCity': 'San Diego',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'Ivy',
-      'currentCity': 'Dallas',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-    {
-      'name': 'Jack',
-      'currentCity': 'San Jose',
-      'profilePhoto': 'https://via.placeholder.com/150'
-    },
-  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -70,15 +21,13 @@ class MessengerPage extends StatelessWidget {
         itemCount: contacts.length,
         itemBuilder: (context, index) {
           final contact = contacts[index];
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: NetworkImage(contact['profilePhoto']!),
-            ),
-            title: Text(contact['name']!),
-            subtitle: Text('Currently in: ${contact['currentCity']}'),
-            onTap: () {
-              context.go('/messenger', extra: contact['name']);
-            },
+          return ContactTile(
+            id: contact.id,
+            name: contact.name,
+            avatar: contact.avatar,
+            biography: contact.biography,
+            currentCity: contact.currentCity,
+            imageUrls: contact.imageUrls,
           );
         },
       ),

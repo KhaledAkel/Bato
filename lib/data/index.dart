@@ -5,4 +5,5 @@ export 'companions.dart';
 export 'trending.dart';
 export 'cities.dart';
 export 'trips.dart';        
-export './asHostPosts.dart';            
+export './asHostPosts.dart';   
+export './contacts.dart';         

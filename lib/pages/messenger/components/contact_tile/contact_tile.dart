@@ -24,6 +24,7 @@ class ContactTile extends StatelessWidget{
   Widget build(BuildContext context) {
     return ListTile(
             leading: CircleAvatar(
+              backgroundColor: Colors.grey,
               radius: 40,
               backgroundImage: NetworkImage(avatar),
             ),

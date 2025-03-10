@@ -54,7 +54,7 @@ class ContactTile extends StatelessWidget {
           'currentCity': currentCity,
           'imageUrls': imageUrls,
         };
-        context.go('/chat', extra: userMap);
+        context.push('/chat', extra: userMap);
       },
     );
   }

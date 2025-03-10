@@ -12,7 +12,12 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
-  final List<Map<String, dynamic>> _messages = [];
+  final List<Map<String, dynamic>> _messages = [
+    {'text': 'Hi there!', 'isUser': false},
+    {'text': 'Hello! How are you?', 'isUser': true},
+    {'text': 'I am good, thanks! How about you?', 'isUser': false},
+    {'text': 'I am doing well, thank you!', 'isUser': true},
+  ];
   final TextEditingController _controller = TextEditingController();
 
   void _sendMessage(String message, bool isUser) {
@@ -24,12 +29,15 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text(widget.user['name']),
+        backgroundColor: AppColors.background,
+        scrolledUnderElevation: 0,
+        title: Text(widget.user['name'], style: TextStyle(color: AppColors.text, fontWeight: FontWeight.bold, fontFamily: AppTextStyles.fontFamilyPrimary)),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            context.pop();
           },
         ),
       ),
@@ -64,11 +72,19 @@ class _ChatPageState extends State<ChatPage> {
               children: [
                 Expanded(
                   child: TextField(
+                    cursorColor: AppColors.text,
                     controller: _controller,
                     decoration: InputDecoration(
+                      focusColor: AppColors.text,
+                      hoverColor: AppColors.text  ,
+                      fillColor: AppColors.text,
                       hintText: 'Type a message',
-                      border: OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(color: AppColors.text),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.text),
                       ),
                     ),
                   ),
@@ -91,64 +107,6 @@ class _ChatPageState extends State<ChatPage> {
           ),
         ],
       ),
-    );
-  }
-}
-
-class ContactTile extends StatelessWidget {
-  final int id;
-  final String name;
-  final String avatar;
-  final String biography;
-  final String currentCity;
-  final List<String> imageUrls;
-
-  const ContactTile({
-    Key? key,
-    required this.id,
-    required this.name,
-    required this.avatar,
-    required this.biography,
-    required this.currentCity,
-    required this.imageUrls,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: CircleAvatar(
-        backgroundColor: Colors.grey,
-        radius: 40,
-        backgroundImage: NetworkImage(avatar),
-      ),
-      title: Text(
-        name,
-        style: TextStyle(
-          color: AppColors.text,
-          fontSize: 15,
-          fontFamily: AppTextStyles.fontFamilyPrimary,
-          fontWeight: FontWeight.w700,
-        ),
-      ),
-      subtitle: Text(
-        'Currently in $currentCity',
-        style: TextStyle(
-          color: AppColors.text,
-          fontSize: 12,
-          fontFamily: AppTextStyles.fontFamilyPrimary,
-        ),
-      ),
-      onTap: () {
-        final userMap = {
-          'id': id,
-          'name': name,
-          'avatar': avatar,
-          'biography': biography,
-          'currentCity': currentCity,
-          'imageUrls': imageUrls,
-        };
-        context.go('/chat', extra: userMap);
-      },
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../theme/index.dart' show AppColors, AppTextStyles;
 
 class ContactTile extends StatelessWidget{
   final int id;
@@ -26,8 +27,22 @@ class ContactTile extends StatelessWidget{
               radius: 40,
               backgroundImage: NetworkImage(avatar),
             ),
-            title: Text(name),
-            subtitle: Text('Currently in ${currentCity}'),
+            title: Text(name, style: TextStyle(
+              color: AppColors.text,
+              fontSize: 15,
+              fontFamily: AppTextStyles.fontFamilyPrimary,
+              fontWeight: FontWeight.w700
+            ),),
+            subtitle: Text('Currently in ${currentCity}', 
+            style: TextStyle(
+              color: AppColors.text,
+              fontSize: 12,
+              fontFamily: AppTextStyles.fontFamilyPrimary,
+            ),),
+
+            onTap: () {
+              // Navigate to the chat screen
+            },
       
           );
   }

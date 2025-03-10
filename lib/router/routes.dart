@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, DonePage, MessengerPage, ViewTripPage, ViewHostPage, OtherProfile, ChatPage;
+import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, DonePage, MessengerPage, ViewTripPage, ViewHostPage, OtherProfile, ChatPage, AddTripPostPage, AddHostPostPage;
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
 import '../theme/index.dart' show AppColors;
@@ -16,6 +16,8 @@ final GoRouter goRouter = GoRouter(
     GoRoute(path: '/hotels', builder: (context, state) => HotelsPage()),
     GoRoute(path: '/done', builder: (context, state) => DonePage()), // Add DonePage route
     GoRoute(path: '/messenger', builder: (context, state) => MessengerPage()), // Add MessengerPage route
+    GoRoute(path: '/add_trip', builder: (context, state) => AddTripPostPage()),
+    GoRoute(path: '/add_host', builder: (context, state) => AddHostPostPage()),
     GoRoute(
       path: '/view-trip',
       builder: (context, state) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, DonePage, MessengerPage, ViewTripPage, ViewHostPage;
+import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, DonePage, MessengerPage, ViewTripPage, ViewHostPage, OtherProfile, ChatPage;
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
 import '../theme/index.dart' show AppColors;
@@ -22,6 +22,8 @@ final GoRouter goRouter = GoRouter(
         final tripId = state.extra as int;
         return ViewTripPage(tripId: tripId);
       },
+      
+
     ), // Add ViewTripPage route
        GoRoute(
       path: '/view-host',
@@ -29,7 +31,17 @@ final GoRouter goRouter = GoRouter(
         final hostId = state.extra as int;
         return ViewHostPage(hostId: hostId);
       },
+      
     ), // Add ViewTripPage route
+    GoRoute(
+      path: '/chat',
+      builder: (context, state) {
+        final user = state.extra as Map<String, dynamic>;
+        return ChatPage(user: user);
+      },
+      
+
+    ),
     ShellRoute(
       builder: (context, state, child) {
         final int pageIndex = getPageIndexOfBottomBar(state.fullPath);

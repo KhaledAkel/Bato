@@ -9,3 +9,4 @@ export './add_post/add_post.dart';
 export './add_post/screens/index.dart';
 export './done/done.dart';
 export './messenger/messenger.dart';
+export './chat/chat.dart';

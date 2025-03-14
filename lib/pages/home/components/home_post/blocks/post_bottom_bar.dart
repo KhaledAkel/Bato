@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../theme/app_colors.dart' show AppColors;
 
 class PostBottomBar extends StatefulWidget {
@@ -32,7 +33,9 @@ class _PostBottomBarState extends State<PostBottomBar> {
               ),
               IconButton(
                 icon: Icon(Icons.comment),
-                onPressed: () {},
+                onPressed: () {
+                  context.push('/comments');
+                },
               ),
               IconButton(
                 icon: Icon(Icons.send),

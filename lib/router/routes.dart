@@ -4,7 +4,8 @@ import '../pages/index.dart' show
 SplashPage, HomePage, ExplorePage, 
 PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, 
 DonePage, MessengerPage, ViewTripPage, ViewHostPage, OtherProfile, 
-ChatPage, AddTripPostPage, AddHostPostPage, NotificationPage, FullScreenImage;
+ChatPage, AddTripPostPage, AddHostPostPage, NotificationPage, FullScreenImage,
+CommentPage;
 
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
@@ -27,6 +28,7 @@ final GoRouter goRouter = GoRouter(
     GoRoute(path: '/full_screen_image', builder: (context, state) => FullScreenImage(
       imageUrl: state.extra as String,
     )),
+    GoRoute(path: '/comments', builder: (context, state) => CommentPage()),
 
     GoRoute(
       path: '/view-trip',

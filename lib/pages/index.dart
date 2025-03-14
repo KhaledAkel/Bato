@@ -10,3 +10,4 @@ export './add_post/screens/index.dart';
 export './done/done.dart';
 export './messenger/messenger.dart';
 export './chat/chat.dart';
+export  './notification/notification.dart';

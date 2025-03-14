@@ -11,3 +11,4 @@ export './done/done.dart';
 export './messenger/messenger.dart';
 export './chat/chat.dart';
 export  './notification/notification.dart';
+export './full_screen_image/full_screen_image.dart';

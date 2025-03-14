@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../pages/index.dart' show SplashPage, HomePage, ExplorePage, PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, DonePage, MessengerPage, ViewTripPage, ViewHostPage, OtherProfile, ChatPage, AddTripPostPage, AddHostPostPage, NotificationPage;
+import '../pages/index.dart' show 
+SplashPage, HomePage, ExplorePage, 
+PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, 
+DonePage, MessengerPage, ViewTripPage, ViewHostPage, OtherProfile, 
+ChatPage, AddTripPostPage, AddHostPostPage, NotificationPage, FullScreenImage;
+
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
 import '../theme/index.dart' show AppColors;
@@ -19,6 +24,10 @@ final GoRouter goRouter = GoRouter(
     GoRoute(path: '/add_trip', builder: (context, state) => AddTripPostPage()),
     GoRoute(path: '/add_host', builder: (context, state) => AddHostPostPage()),
     GoRoute(path: '/notification', builder: (context, state) => NotificationPage()),
+    GoRoute(path: '/full_screen_image', builder: (context, state) => FullScreenImage(
+      imageUrl: state.extra as String,
+    )),
+
     GoRoute(
       path: '/view-trip',
       builder: (context, state) {

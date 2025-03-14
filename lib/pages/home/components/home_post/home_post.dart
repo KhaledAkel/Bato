@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 import './blocks/index.dart' show PostDetails;
 import '../../../../theme/app_colors.dart' show AppColors;
 
@@ -26,8 +27,26 @@ class HomePost extends StatefulWidget {
 }
 
 class _HomePostState extends State<HomePost> {
-  final PageController _controller =
-      PageController(initialPage: 1, viewportFraction: 0.93);
+  final PageController _controller = PageController(initialPage: 1, viewportFraction: 0.93);
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _startAnimation();
+    });
+  }
+
+  void _startAnimation() {
+    Future.delayed(Duration(seconds: 3), () {
+      _controller.animateToPage(0,
+          duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+      Future.delayed(Duration(milliseconds: 300), () {
+        _controller.animateToPage(1,
+            duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

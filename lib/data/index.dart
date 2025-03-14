@@ -7,3 +7,4 @@ export 'cities.dart';
 export 'trips.dart';        
 export './asHostPosts.dart';   
 export './contacts.dart';         
+export './hosts.dart';

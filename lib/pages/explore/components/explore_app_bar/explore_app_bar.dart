@@ -20,7 +20,9 @@ class ExploreAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: Icon(Icons.notifications_none),
           iconSize: 25,
           color: AppColors.text,
-          onPressed: () {},
+          onPressed: () {
+            context.push('/notifications');
+          },
         ),
         IconButton(
           icon: Icon(Icons.message_outlined),

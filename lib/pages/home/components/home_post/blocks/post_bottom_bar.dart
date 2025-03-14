@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../theme/app_colors.dart' show AppColors;
+import '../../../../../data/index.dart' show contacts;
+import './index.dart' show ContactTile;
 
 class PostBottomBar extends StatefulWidget {
   @override
@@ -10,6 +12,42 @@ class PostBottomBar extends StatefulWidget {
 class _PostBottomBarState extends State<PostBottomBar> {
   bool isLiked = false;
   bool isSaved = false;
+
+  void _showShareBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          color: AppColors.background,
+          padding: EdgeInsets.all(10),
+          height: 300,
+          child: Column(
+            children: [
+              Text('Share with', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              Expanded(
+                child: ListView.builder(
+        itemCount: contacts.length,
+        itemBuilder: (context, index) {
+          final contact = contacts[index];
+          return ContactTile(
+            id: contact.id,
+            name: contact.name,
+            avatar: contact.avatar,
+            biography: contact.biography,
+            currentCity: contact.currentCity,
+            imageUrls: contact.imageUrls,
+          );
+        },
+      ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +77,9 @@ class _PostBottomBarState extends State<PostBottomBar> {
               ),
               IconButton(
                 icon: Icon(Icons.send),
-                onPressed: () {},
+                onPressed: () {
+                  _showShareBottomSheet(context);
+                },
               ),
             ],
           ),

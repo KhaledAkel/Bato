@@ -15,6 +15,7 @@ class _PlanTripPageState extends State<PlanTripPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

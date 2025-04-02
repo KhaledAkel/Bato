@@ -13,3 +13,4 @@ export './chat/chat.dart';
 export  './notification/notification.dart';
 export './full_screen_image/full_screen_image.dart';
 export './comments/commnets.dart';
+export './index.dart';

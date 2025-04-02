@@ -86,15 +86,7 @@ class CityCard extends StatelessWidget {
           Row(
             children: <Widget>[
               SizedBox(width: 5.0),
-              Text(
-                '\$${city.newPrice}',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),
-              ),
-              SizedBox(width: 5.0),
-              Text(
-                '(\$${city.oldPrice})',
-                style: TextStyle(color: Colors.grey, fontSize: 12.0),
-              ),
+ 
             ],
           )
         ],

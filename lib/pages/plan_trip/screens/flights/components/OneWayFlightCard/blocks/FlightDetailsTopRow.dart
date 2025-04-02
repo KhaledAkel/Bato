@@ -17,12 +17,15 @@ class FlightDetailsTopRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          '$departureDate - $arrivalDate',
-          style: TextStyle(
-            fontSize: 16,
-            fontFamily: AppTextStyles.fontFamilyPrimary,
-            color: AppColors.text,
+        Padding(
+          padding: const EdgeInsets.only(right:8.0),
+          child: Text(
+            '$departureDate - $arrivalDate',
+            style: TextStyle(
+              fontSize: 16,
+              fontFamily: AppTextStyles.fontFamilyPrimary,
+              color: AppColors.text,
+            ),
           ),
         ),
         Text(

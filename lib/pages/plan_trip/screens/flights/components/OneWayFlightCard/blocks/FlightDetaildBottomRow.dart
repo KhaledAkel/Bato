@@ -17,13 +17,16 @@ class FlightDetailsBottomRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          '$origin - $destination',
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-            fontFamily: AppTextStyles.fontFamilyPrimary,
-            color: Colors.grey,
+        Padding(
+          padding: const EdgeInsets.only(right:8.0),
+          child: Text(
+            '$origin - $destination',
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              fontFamily: AppTextStyles.fontFamilyPrimary,
+              color: Colors.grey,
+            ),
           ),
         ),
         Text(

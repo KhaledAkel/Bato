@@ -3,9 +3,9 @@ import 'package:go_router/go_router.dart';
 import '../pages/index.dart' show 
 SplashPage, HomePage, ExplorePage, 
 PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage, 
-DonePage, MessengerPage, ViewTripPage, ViewHostPage, OtherProfile, 
+DonePage, MessengerPage, ViewTripPage, ViewHostPage, 
 ChatPage, AddTripPostPage, AddHostPostPage, NotificationPage, FullScreenImage,
-ViewDealFlightPage,
+ViewDealFlightPage, ViewDealHotelPage,
 CommentPage;
 
 import '../components/index.dart' show BottomBar;
@@ -27,6 +27,7 @@ final GoRouter goRouter = GoRouter(
     GoRoute(path: '/add_host', builder: (context, state) => AddHostPostPage()),
     GoRoute(path: '/notification', builder: (context, state) => NotificationPage()),
     GoRoute(path: '/view_deal_flight', builder: (context, state) => ViewDealFlightPage()),
+    GoRoute(path: '/view_deal_hotel', builder: (context, state) => ViewDealHotelPage()),
     GoRoute(path: '/full_screen_image', builder: (context, state) => FullScreenImage(
       imageUrl: state.extra as String,
     )),

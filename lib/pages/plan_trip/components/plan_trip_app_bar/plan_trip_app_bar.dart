@@ -23,15 +23,6 @@ class PlanTripAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0.0,
       scrolledUnderElevation: 0,
       
-      actions: [
-        IconButton(
-          icon: Icon(Icons.book_outlined),
-          iconSize: 25,
-          color: AppColors.background,
-          onPressed: () {},
-        ),
-      ],
-      
     );
   }
   @override

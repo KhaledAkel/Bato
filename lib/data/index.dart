@@ -8,3 +8,4 @@ export 'trips.dart';
 export './asHostPosts.dart';   
 export './contacts.dart';         
 export './hosts.dart';
+export './hotels.dart';

@@ -25,7 +25,7 @@ class HotelCard extends StatelessWidget {
   Widget build(BuildContext context) {
     // Check if the app is in dark mode
     return Card(
-      color: Theme.of(context).scaffoldBackgroundColor,
+      color: AppColors.background ,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
           side: BorderSide(

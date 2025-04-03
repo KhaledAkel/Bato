@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../../../theme/app_colors.dart' show AppColors;
 import '../../../../../../../data/index.dart' show contacts;
-import '../../../../../../messenger/components/index.dart' show ContactTile;
+import './index.dart' show ContactTile;
 
 class PostBottomBar extends StatefulWidget {
   @override

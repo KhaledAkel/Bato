@@ -27,5 +27,18 @@ List<User> usersList = [
     ],
 
   ),
+    User(
+    id: 1,
+    name: 'Jane Smith',
+    avatar: 'https://res.cloudinary.com/doiav30hi/image/upload/v1741955484/por1_hcvdvq.jpg',
+    biography: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    currentCity: 'Lisbon, Portugal',
+    imageUrls: [
+      'https://res.cloudinary.com/doiav30hi/image/upload/v1741955484/por1_hcvdvq.jpg',
+ 
+    ],
+
+  ),
+ 
 
 ];

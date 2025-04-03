@@ -22,11 +22,11 @@ class OtherProfile extends StatelessWidget {
         children: [
           OtherProfileMainPost(
             id: 0,
-            postOwnerName: usersList[1].name,
-            postLocation: usersList[1].currentCity,
-            postProfileImageUrl: usersList[1].avatar,
-            imageUrls: usersList[1].imageUrls,
-            postCaption: usersList[1].biography,
+            postOwnerName: usersList[2].name,
+            postLocation: usersList[2].currentCity,
+            postProfileImageUrl: usersList[2].avatar,
+            imageUrls: usersList[2].imageUrls,
+            postCaption: usersList[2].biography,
           ),
           ProfileTabController(),
         ],

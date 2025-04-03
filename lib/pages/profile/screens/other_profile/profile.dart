@@ -1,41 +1,36 @@
 import 'package:flutter/material.dart';
-import '../../components/index.dart' show ProfileMainPost, ProfileTabController;
+import '../../components/index.dart' show OtherProfileMainPost, ProfileTabController;
 import '../../../../data/index.dart' show usersList;
+import '../../../../theme/index.dart' show AppColors;
 
 class OtherProfile extends StatelessWidget {
-  final int id;
-  final String postOwnerName;
-  final String postLocation;
-  final String postProfileImageUrl;
-  final List<String> imageUrls;
-  final String postCaption;
-
-  OtherProfile({
-    required this.id,
-    required this.postOwnerName,
-    required this.postLocation,
-    required this.postProfileImageUrl,
-    required this.imageUrls,
-    required this.postCaption,
-  });
-
-
-
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-         ProfileMainPost(
-          id: 0,
-          postOwnerName: postOwnerName,
-          postLocation: postLocation,
-          postProfileImageUrl: postProfileImageUrl,
-          imageUrls: imageUrls,
-          postCaption: postCaption,
-          
-        ),
-        ProfileTabController(),
-      ],
+
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      appBar: AppBar(
+        title: Text(usersList[1].name, style: TextStyle(
+          color: AppColors.text,
+          fontFamily: 'Poppins',
+          fontSize: 20,
+          fontWeight: FontWeight.w600,
+        ),),
+        backgroundColor: AppColors.background,
+      ),
+      body: ListView(
+        children: [
+          OtherProfileMainPost(
+            id: 0,
+            postOwnerName: usersList[1].name,
+            postLocation: usersList[1].currentCity,
+            postProfileImageUrl: usersList[1].avatar,
+            imageUrls: usersList[1].imageUrls,
+            postCaption: usersList[1].biography,
+          ),
+          ProfileTabController(),
+        ],
+      ),
     );
   }
 }

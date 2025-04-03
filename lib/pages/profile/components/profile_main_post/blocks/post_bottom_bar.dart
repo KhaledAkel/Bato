@@ -20,7 +20,7 @@ class _PostBottomBarState extends State<PostBottomBar> {
           TextButton.icon(
       onPressed: () {},
       icon: const Icon(Icons.send, color: AppColors.primary),
-      label: const Text("Send a message", style: TextStyle(color: AppColors.primary)),
+      label: const Text("Edit", style: TextStyle(color: AppColors.primary)),
       style: TextButton.styleFrom(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
         shape: RoundedRectangleBorder(

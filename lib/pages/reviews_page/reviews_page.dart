@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/theme/index.dart';
 
 class ReviewsPage extends StatelessWidget {
   final List<Map<String, String>> reviews = [
@@ -18,10 +19,19 @@ class ReviewsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text('Reviews'),
-        centerTitle: true,
-        backgroundColor: Colors.blueAccent,
+        title: Text(
+          'Reviews',
+          style: TextStyle(
+            color: AppColors.text,
+            fontFamily: AppTextStyles.fontFamilyPrimary,
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        backgroundColor: AppColors.background,
+        scrolledUnderElevation: 0,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -29,54 +39,58 @@ class ReviewsPage extends StatelessWidget {
           itemCount: reviews.length,
           itemBuilder: (context, index) {
             final review = reviews[index];
-            return Card(
-              elevation: 4.0,
+            return Container(
               margin: const EdgeInsets.symmetric(vertical: 8.0),
-              shape: RoundedRectangleBorder(
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: AppColors.background,
+                border: Border.all(
+                  color: AppColors.text, // Border color
+                  width: 2.0,
+                ),
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // User Avatar
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(50.0),
-                      child: Image.network(
-                        review['avatar']!,
-                        height: 50,
-                        width: 50,
-                        fit: BoxFit.cover,
-                      ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // User Avatar
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(50.0),
+                    child: Image.network(
+                      review['avatar']!,
+                      height: 50,
+                      width: 50,
+                      fit: BoxFit.cover,
                     ),
-                    const SizedBox(width: 16.0),
+                  ),
+                  const SizedBox(width: 16.0),
 
-                    // Review Details
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            review['name']!,
-                            style: const TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold,
-                            ),
+                  // Review Details
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          review['name']!,
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
                           ),
-                          const SizedBox(height: 8.0),
-                          Text(
-                            review['review']!,
-                            style: const TextStyle(
-                              fontSize: 14.0,
-                              color: Colors.grey,
-                            ),
+                        ),
+                        const SizedBox(height: 8.0),
+                        Text(
+                          review['review']!,
+                          style: const TextStyle(
+                            fontSize: 14.0,
+                            color: Colors.grey,
                           ),
-                        ],
-                      ),
+                          maxLines: 2, // Limit to 2 lines
+                          overflow: TextOverflow.ellipsis, // Add ellipsis for overflow
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             );
           },

@@ -27,7 +27,6 @@ final GoRouter goRouter = GoRouter(
     GoRoute(path: '/add_host', builder: (context, state) => AddHostPostPage()),
     GoRoute(path: '/notification', builder: (context, state) => NotificationPage()),
     GoRoute(path: '/view_deal_flight', builder: (context, state) => ViewDealFlightPage()),
-    GoRoute(path: '/reviews', builder: (context, state) => ReviewsPage()),
     GoRoute(path: '/view_deal_hotel', builder: (context, state) => ViewDealHotelPage()),
     GoRoute(path: '/other_profile', builder: (context, state) => OtherProfile()),
     GoRoute(path: '/explore_list', builder: (context, state) => ExploreListPage()),
@@ -61,6 +60,12 @@ final GoRouter goRouter = GoRouter(
       },
       
 
+    ),
+    GoRoute(
+      path: '/reviews',
+      builder: (context, state) {
+        return ReviewsPage();
+      },
     ),
     ShellRoute(
       builder: (context, state, child) {

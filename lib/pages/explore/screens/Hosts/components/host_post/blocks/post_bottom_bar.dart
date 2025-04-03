@@ -74,13 +74,12 @@ class _PostBottomBarState extends State<PostBottomBar> {
                 'id': widget.id,
                 'name': widget.name,
               };
-              print('Navigating to reviews for user: $reviewMap');
               context.push('/reviews', extra: reviewMap);
             },
-            icon: const Icon(Icons.reviews, color: AppColors.primary),
+            icon: const Icon(Icons.reviews, color: Colors.blueGrey),
             label: const Text(
               "See Reviews",
-              style: TextStyle(color: AppColors.primary),
+              style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.w600   ),
             ),
             style: TextButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),

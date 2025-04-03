@@ -15,3 +15,4 @@ export  './notification/notification.dart';
 export './full_screen_image/full_screen_image.dart';
 export './comments/commnets.dart';
 export './index.dart';
+export './reviews_page/reviews_page.dart';

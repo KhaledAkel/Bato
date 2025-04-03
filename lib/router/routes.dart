@@ -6,7 +6,7 @@ PlanTripPage, FlightsPage, HotelsPage, ProfilePage, AddPostPage,
 DonePage, MessengerPage, ViewTripPage, ViewHostPage, 
 ChatPage, AddTripPostPage, AddHostPostPage, NotificationPage, FullScreenImage,
 ViewDealFlightPage, ViewDealHotelPage, ExploreListPage, OtherProfile,
-CommentPage;
+CommentPage, ReviewsPage;
 
 import '../components/index.dart' show BottomBar;
 import './functions/index.dart' show getPageIndexOfBottomBar, getBottomBarPageName, getAppBar;
@@ -27,6 +27,7 @@ final GoRouter goRouter = GoRouter(
     GoRoute(path: '/add_host', builder: (context, state) => AddHostPostPage()),
     GoRoute(path: '/notification', builder: (context, state) => NotificationPage()),
     GoRoute(path: '/view_deal_flight', builder: (context, state) => ViewDealFlightPage()),
+    GoRoute(path: '/reviews', builder: (context, state) => ReviewsPage()),
     GoRoute(path: '/view_deal_hotel', builder: (context, state) => ViewDealHotelPage()),
     GoRoute(path: '/other_profile', builder: (context, state) => OtherProfile()),
     GoRoute(path: '/explore_list', builder: (context, state) => ExploreListPage()),
